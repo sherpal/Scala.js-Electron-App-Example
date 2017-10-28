@@ -24,7 +24,7 @@ fullOptCompileCopy := {
    * We read the default package.json file and copy paste it into electron folder, with reference to the compiled file.
    */
 
-  def toFullOptFile(line: String): String = """COMPILEDFILE""".r.replaceAllIn(line, "opt")
+  def toFullOptFile(line: String): String = """COMPILEMODE""".r.replaceAllIn(line, "opt")
 
   val sourcePackageJSON = IO.readLines(baseDirectory.value / "source-package-json/package.json")
 
@@ -55,7 +55,7 @@ fastOptCompileCopy := {
    * We read the default package.json file and copy paste it into electron folder, with reference to the compiled file.
    */
 
-  def toFastOptFile(line: String): String = """COMPILEDFILE""".r.replaceAllIn(line, "fastopt")
+  def toFastOptFile(line: String): String = """COMPILEMODE""".r.replaceAllIn(line, "fastopt")
 
   val sourcePackageJSON = IO.readLines(baseDirectory.value / "source-package-json/package.json")
 
